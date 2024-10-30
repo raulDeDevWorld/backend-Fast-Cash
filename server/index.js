@@ -7,7 +7,9 @@ import DataCollection from './models/DataCollection.js';
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://fast-cash-five.vercel.app/' // Cambia esto a la URL de tu frontend
+}));
 app.use(express.json());
 
 // MongoDB Atlas connection with error handling
