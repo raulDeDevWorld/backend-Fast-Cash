@@ -29,7 +29,7 @@ app.post('/api/data', async (req, res) => {
 });
 
 // Read (all)
-app.get('/api/data', async (req, res) => {
+app.get('https://backend-fast-cash.vercel.app/api/data', async (req, res) => {
   try {
     const data = await DataCollection.find();
     res.json(data);
